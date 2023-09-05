@@ -22,8 +22,19 @@ a{
   margin-top: 15px;
 }
 
-/* .TheBody{ 
-  display: flex;
-  justify-content: center;
-  text-align: center;
-} */
+.TheBody{ 
+text-align: center;
+margin-top: 210px;
+}
+
+p{
+  font-size: 30px;
+}
+
+button{
+  padding: 15px 50px;
+  border-radius: 13px;
+  border: 1px solid black;
+  font-size: 16px;
+  font-weight: bolder;
+}
