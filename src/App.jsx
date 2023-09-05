@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function App() {
-  const [currentColor, setCurrentColor] = useState("Black");
+  const [currentColor, setCurrentColor] = useState("white");
   const [colorMode, setColorMode] = useState("simple");
 
   const toggleColorMode = () => {
@@ -10,8 +10,8 @@ function App() {
 
   const changeColor = () => {
     // Define an array of simple colors and hex colors.
-    const simpleColors = ["Black", "White", "Red", "Green", "Blue"];
-    const hexColors = ["#000000", "#FFFFFF", "#FF5733", "#33FF57", "#5733FF"];
+    const simpleColors = [ "White", "Red", "Green", "Blue"];
+    const hexColors = [ "#FFFFFF", "#FF5733", "#33FF57", "#5733FF"];
 
     // Get a random index based on the current mode.
     const randomIndex =
@@ -27,24 +27,25 @@ setCurrentColor(newColor);
 };
 
   return (
-    <>
-      <div className="color-change">
+      <div className="color-change" style={{ backgroundColor: currentColor }}>
         <div className="nav-details">
           <h3>COLOR FLIPPER</h3>
           <div className="color-range">
           <a href="#" onClick={toggleColorMode} style={{ marginRight: "8px" }}>
-              {colorMode === "hex" ? "Simple" : "Hex"}
+              Simple
+            </a>
+            <a href="#" onClick={toggleColorMode}>
+              Hex
             </a>
           </div>
         </div>
-        <div className="color-body" style={{ backgroundColor: currentColor }}>
+        <div className="color-body" >
         <div className="TheBody" >
             <p>Background Color: {currentColor}</p>
             <button onClick={changeColor}>Change Color</button>
           </div>
         </div>
       </div>
-    </>
   );
 }
 
